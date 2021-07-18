@@ -1,18 +1,18 @@
 <div class="container p-5 bugInfo">
     <div class="row">
         <div class="col column-1">
-            <form (submit)="addBugIssue()">
+            <form  [formGroup]="form" (submit)="addBugIssue()">
             <div class="mb-3">
-                <input type="text" class="form-control" name="inputName" placeholder="Your Name" [(ngModel)]="inputName" required>
+                <input type="text" class="form-control" name="inputName" id="inputName" formControlName="inputName" placeholder="Your Name" [(ngModel)]="inputName">
             </div>
             <div class="mb-3">
-                <input type="text" class="form-control" name="inputBugTitle" placeholder="Bug Title" [(ngModel)]="inputBugTitle" required>
+                <input type="text" class="form-control" name="inputBugTitle" id="inputBugTitle" formControlName="inputBugTitle" placeholder="Bug Title" [(ngModel)]="inputBugTitle" required>
             </div>
             <div class="mb-3">
-                <textarea class="form-control" rows="3" name= "inputBugInfo" placeholder="More Information On The Issue" [(ngModel)]="inputBugInfo" required></textarea>
+                <textarea class="form-control" rows="3" name="inputBugInfo" id="inputBugInfo" formControlName="inputBugInfo" placeholder="More Information On The Issue" [(ngModel)]="inputBugInfo" required></textarea>
             </div>
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-secondary">Submit</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
             </div>
             </form>
         </div>

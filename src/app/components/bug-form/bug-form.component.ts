@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { bugInfo } from 'src/app/models/BugInfo';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-bug-form',
@@ -14,9 +15,17 @@ export class BugFormComponent implements OnInit {
   inputBugTitle:string = "";
   inputBugInfo:string = "";
 
-  constructor() { }
+  form!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      inputName: ['', [Validators.required]],
+      inputBugTitle: ['', Validators.required],
+      inputBugInfo: ['', Validators.required],
+    });
+
     this.bugInfo = []
   }
 
