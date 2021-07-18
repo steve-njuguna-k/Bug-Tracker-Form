@@ -21,7 +21,7 @@ export class BugFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      inputName: ['', [Validators.required]],
+      inputName: ['', Validators.required],
       inputBugTitle: ['', Validators.required],
       inputBugInfo: ['', Validators.required],
     });
