@@ -1,15 +1,16 @@
 <div class="container p-5 bugInfo">
     <div class="row">
         <div class="col column-1">
-            <form  [formGroup]="form" (submit)="addBugIssue()">
+            <p><b>Please Fill In The Bug Report Form</b></p>
+            <form  [formGroup]="form" (submit)="addBugIssue()" >
             <div class="mb-3">
-                <input type="text" class="form-control" name="inputName" id="inputName" formControlName="inputName" placeholder="Your Name" [(ngModel)]="inputName">
+                <input type="text" class="form-control" id="inputName" formControlName="inputName" placeholder="Your Name" [(ngModel)]="inputName">
             </div>
             <div class="mb-3">
-                <input type="text" class="form-control" name="inputBugTitle" id="inputBugTitle" formControlName="inputBugTitle" placeholder="Bug Title" [(ngModel)]="inputBugTitle" required>
+                <input type="text" class="form-control" id="inputBugTitle" formControlName="inputBugTitle" placeholder="Bug Title" [(ngModel)]="inputBugTitle" required>
             </div>
             <div class="mb-3">
-                <textarea class="form-control" rows="3" name="inputBugInfo" id="inputBugInfo" formControlName="inputBugInfo" placeholder="More Information On The Issue" [(ngModel)]="inputBugInfo" required></textarea>
+                <textarea class="form-control" rows="3" id="inputBugInfo" formControlName="inputBugInfo" placeholder="More Information On The Issue" [(ngModel)]="inputBugInfo" required></textarea>
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
@@ -19,7 +20,7 @@
         <div class="col column-2">
             <b><p class="text-center"> Bug Summary</p></b>
             <div *ngFor="let bugs of bugInfo; let i = index;" class="bugs {{(bugs.completed ? 'done' : '')}}">
-                <div class="id"><b>Issue No: </b>{{i}}</div>
+                <div class="id"><b>Issue No: </b>#{{i}}</div>
                 <div class="name"><b>Submitted By: </b>{{bugs.name}}</div>
                 <div class="status"><b>Status: </b>Solved</div>
                 <div class="bugTitle"><b>Bug Title: </b>{{bugs.bugTitle}}</div>
