@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BugFormComponent implements OnInit {
 
+  title = "Issue Summary";
+
   constructor() { }
 
   ngOnInit(): void {
