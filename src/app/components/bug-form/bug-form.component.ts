@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BugInfo } from 'src/app/models/BugInfo';
 
 @Component({
   selector: 'app-bug-form',
@@ -7,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BugFormComponent implements OnInit {
 
-  title = "Issue Summary";
+  bugInfo: BugInfo[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.bugInfo = [
+      {
+        name:"Steve Njuguna",
+        bugTitle:"Unresponsive UI",
+        content:"The UI is very unresponsive, please check on it ASAP!",
+        completed:false
+      }
+    ]
   }
 
 }
