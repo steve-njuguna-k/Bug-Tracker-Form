@@ -31,4 +31,8 @@ export class BugFormComponent implements OnInit {
     })
   }
 
+  deleteIssue(id:number){
+    this.bugInfo = this.bugInfo.filter((v ,i) => i != id);
+  }
+
 }
