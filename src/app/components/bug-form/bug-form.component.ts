@@ -26,7 +26,14 @@ export class BugFormComponent implements OnInit {
       inputBugInfo: ['', Validators.required],
     });
 
-    this.bugInfo = []
+    this.bugInfo = [
+      {
+      name: "Steve Njuguna",
+      bugTitle: "API Docs",
+      content: "API is not functioning. Kindly check on it ASAP. It's very inconviencing. I want my money back.",
+      completed:false
+      }
+    ]
   }
 
   addBugIssue() {
