@@ -10,3 +10,19 @@
     border-radius: 10px;
     padding: 20px;
 }
+
+.bugs .status{
+    color: #dd0000;
+}
+
+.bugs.done .status{
+    color: green;
+}
+
+.bugs.done .content{
+    text-decoration: line-through;
+}
+
+.bugs.done .bugTitle{
+    text-decoration: line-through;
+}

@@ -18,12 +18,13 @@
         </div>
         <div class="col column-2">
             <b><p class="text-center"> Bug Summary</p></b>
-            <div class="bugs" *ngFor="let bugs of bugInfo; let i = index;">
+            <div *ngFor="let bugs of bugInfo; let i = index;" class="bugs {{(bugs.completed ? 'done' : '')}}">
                 <div class="name"><b>Name: </b>{{bugs.name}}</div>
+                <div class="status"><b>Status: </b>{{bugs.status}}</div>
                 <div class="bugTitle"><b>Bug Title: </b>{{bugs.bugTitle}}</div>
                 <div class="content"><b>Issue: </b>{{bugs.content}}</div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-danger btn-sm">Remove</button>
+                    <button class="btn btn-danger btn-sm delete">Solved</button>
                 </div>
                 <hr>
             </div>

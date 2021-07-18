@@ -16,9 +16,10 @@ export class BugFormComponent implements OnInit {
     this.bugInfo = [
       {
         name:"Steve Njuguna",
+        status: "Unsolved",
         bugTitle:"Unresponsive UI",
         content:"The UI is very unresponsive, please check on it ASAP!",
-        completed:false
+        completed:true
       }
     ]
   }
