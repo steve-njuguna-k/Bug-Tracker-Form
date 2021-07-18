@@ -1,4 +1,10 @@
-# AngularBugTrackerForm
+Angular Bug Tracker Form
+------------------------
+This is an Angular bug tracker form for submitting software bug complaints by developers.
+
+![](https://github.com/steve-njuguna-k/Pizza-Cranch/blob/master/src/assets/images/Screenshot.PNG)
+
+Done by Steve Njuguna
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
