@@ -1,6 +1,5 @@
-export class BugInfo{
+export class bugInfo{
     name: string = "";
-    status: string = "";
     bugTitle: string = "";
     content: string = "";
     completed: boolean = false;

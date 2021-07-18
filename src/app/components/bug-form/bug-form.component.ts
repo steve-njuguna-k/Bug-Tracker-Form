@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BugInfo } from 'src/app/models/BugInfo';
+import { bugInfo } from 'src/app/models/BugInfo';
 
 @Component({
   selector: 'app-bug-form',
@@ -7,21 +7,30 @@ import { BugInfo } from 'src/app/models/BugInfo';
   styleUrls: ['./bug-form.component.css']
 })
 export class BugFormComponent implements OnInit {
+  
+  public bugInfo:bugInfo[] = [];
 
-  bugInfo: BugInfo[] = [];
+  inputName:string = "";
+  inputBugTitle:string = "";
+  inputBugInfo:string = "";
 
   constructor() { }
 
   ngOnInit(): void {
-    this.bugInfo = [
-      {
-        name:"Steve Njuguna",
-        status: "Solved",
-        bugTitle:"Unresponsive UI",
-        content:"The UI is very unresponsive, please check on it ASAP!",
-        completed:false
-      }
-    ]
+    this.bugInfo = []
+  }
+
+  addBugIssue() {
+    this.bugInfo.push({
+      name: this.inputName,
+      bugTitle: this.inputBugTitle,
+      content: this.inputBugInfo,
+      completed:false
+    });
+
+    this.inputName = "";
+    this.inputBugTitle = "";
+    this.inputBugInfo = "";
   }
 
   toggleResolved (id:number) {

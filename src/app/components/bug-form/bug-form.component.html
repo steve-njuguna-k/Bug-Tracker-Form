@@ -1,15 +1,15 @@
 <div class="container p-5 bugInfo">
     <div class="row">
         <div class="col column-1">
-            <form>
+            <form (submit)="addBugIssue()">
             <div class="mb-3">
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Your Name">
+                <input type="text" class="form-control" name="inputName" placeholder="Your Name" [(ngModel)]="inputName" required>
             </div>
             <div class="mb-3">
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="bugtitleHelp" placeholder="Bug Title">
+                <input type="text" class="form-control" name="inputBugTitle" placeholder="Bug Title" [(ngModel)]="inputBugTitle" required>
             </div>
             <div class="mb-3">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="More Information On The Issue"></textarea>
+                <textarea class="form-control" rows="3" name= "inputBugInfo" placeholder="More Information On The Issue" [(ngModel)]="inputBugInfo" required></textarea>
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-secondary">Submit</button>
@@ -21,7 +21,7 @@
             <div *ngFor="let bugs of bugInfo; let i = index;" class="bugs {{(bugs.completed ? 'done' : '')}}">
                 <div class="id"><b>Issue No: </b>{{i}}</div>
                 <div class="name"><b>Submitted By: </b>{{bugs.name}}</div>
-                <div class="status"><b>Status: </b>{{bugs.status}}</div>
+                <div class="status"><b>Status: </b>Solved</div>
                 <div class="bugTitle"><b>Bug Title: </b>{{bugs.bugTitle}}</div>
                 <div class="content"><b>Issue: </b>{{bugs.content}}</div>
                 <button type="button" class="btn btn-success btn-sm" (click)="toggleResolved(i)">Solved</button>
