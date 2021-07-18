@@ -2,7 +2,7 @@ Angular Bug Tracker Form
 ------------------------
 This is an Angular bug tracker form for submitting software bug complaints by developers.
 
-![](https://github.com/steve-njuguna-k/Pizza-Cranch/blob/master/src/assets/images/Screenshot.PNG)
+![](https://github.com/steve-njuguna-k/Bug-Tracker-Form/blob/master/src/assets/images/Screenshot.PNG)
 
 Done by Steve Njuguna
 
@@ -31,3 +31,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Project Setup Instructions
+---------------------------
+1) Git clone the repository https://github.com/steve-njuguna-k/Bug-Tracker-Form.git
+2) Open using any IDE of your choice
+3) Tweak as much as much as you want
+
+Demo
+----
+Here is the demo of the site: https://steve-njuguna-k.github.io/Bug-Tracker-Form
+
+© 2021 Steve Njuguna
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
