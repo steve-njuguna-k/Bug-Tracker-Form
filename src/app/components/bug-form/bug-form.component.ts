@@ -16,12 +16,19 @@ export class BugFormComponent implements OnInit {
     this.bugInfo = [
       {
         name:"Steve Njuguna",
-        status: "Unsolved",
+        status: "Solved",
         bugTitle:"Unresponsive UI",
         content:"The UI is very unresponsive, please check on it ASAP!",
-        completed:true
+        completed:false
       }
     ]
+  }
+
+  toggleResolved (id:number) {
+    this.bugInfo.map((v , i) =>{
+      if (i == id) v.completed = !v.completed;
+      return v;
+    })
   }
 
 }

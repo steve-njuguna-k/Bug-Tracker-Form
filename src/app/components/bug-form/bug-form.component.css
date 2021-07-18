@@ -12,11 +12,13 @@
 }
 
 .bugs .status{
-    color: #dd0000;
+    display: none;
 }
+
 
 .bugs.done .status{
     color: green;
+    display: inline;
 }
 
 .bugs.done .content{
@@ -25,4 +27,8 @@
 
 .bugs.done .bugTitle{
     text-decoration: line-through;
+}
+
+.btn-success{
+    margin-right: 10px;
 }
